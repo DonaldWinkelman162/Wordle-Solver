@@ -51,7 +51,6 @@ def seeker(query, start_year = 2020, end_year = 2020, corpus = 26, smoothing = 1
       string = str(return_data)
       big = string.split(',')
       last = big[len(big) - 1]
-      print(last)
       
       return last
 
