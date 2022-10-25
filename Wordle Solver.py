@@ -42,7 +42,6 @@ def seeker(query, start_year = 2020, end_year = 2020, corpus = 26, smoothing = 1
   response = requests.get(url)
   output = response.json()
   return_data = []
-  print(output)
   if len(output) == 0:
     return "No data available for this Ngram."
   
@@ -181,7 +180,7 @@ def guesser():
   print('Please wait, this might take a while...')
   loops = 5 - len(first.replace(' ', ''))
   r = len(letters)
-       
+  
   if loops == 1:
     for a in letters:
       
@@ -309,8 +308,6 @@ def guesser():
       ordering.append(popularity)
       
   for i in range(len(filteredWords)):
-    print(filteredWords)
-    print(ordering)
     posMax = ordering.index(max(ordering))
     sortedWords.append(filteredWords[posMax])
     filteredWords.remove(filteredWords[posMax])
